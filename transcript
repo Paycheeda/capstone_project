@@ -1,0 +1,227 @@
+vsim work.axis_fifo_tb
+# vsim work.axis_fifo_tb 
+# Start time: 17:53:02 on Aug 17,2025
+# ** Error: (vsim-13) Recompile work.axis_fifo_tb_sv_unit because work.axis_pkg has changed.
+# ** Error (suppressible): (vsim-12) Recompile work.axis_fifo_tb after work.axis_fifo_tb_sv_unit is recompiled.
+# ** Error: (vsim-13) Recompile work.axis_fifo_tb because work.axis_pkg has changed.
+# Error loading design
+# End time: 17:53:02 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vlog /home/ahmed/capstone_project/packet_parser/sim/axis_fifo_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:05 on Aug 17,2025
+# vlog -reportprogress 300 /home/ahmed/capstone_project/packet_parser/sim/axis_fifo_tb.sv 
+# -- Compiling package axis_fifo_tb_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo_tb
+# 
+# Top level modules:
+# 	axis_fifo_tb
+# End time: 17:53:05 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.axis_fifo_tb
+# vsim work.axis_fifo_tb 
+# Start time: 17:53:07 on Aug 17,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.axis_fifo_tb_sv_unit
+# Loading work.axis_fifo_tb
+# Refreshing /home/ahmed/capstone_project/work.axis_fifo
+# ** Error (suppressible): (vlog-12110) The -novopt option has no effect on this product. -novopt option is now deprecated and will be removed in future releases.
+# ** Error: vlog failed.
+# subinvocation of vlog failed; return status = 1.
+# ** Error: (vsim-3171) Could not find machine code for '/home/ahmed/capstone_project/work.axis_fifo'.
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 17:53:07 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:13 on Aug 17,2025
+# vlog -reportprogress 300 /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Error (suppressible): /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(66): (vlog-12003) Variable 'full' written by continuous and procedural assignments. See /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(40). 
+# End time: 17:53:13 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# /home/ahmed/modelsim_ase/linuxaloem/vlog failed.
+vlog /home/ahmed/capstone_project/packet_parser/src/axis/axis_pkg.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:16 on Aug 17,2025
+# vlog -reportprogress 300 /home/ahmed/capstone_project/packet_parser/src/axis/axis_pkg.sv 
+# -- Compiling package axis_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 17:53:16 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog /home/ahmed/capstone_project/packet_parser/sim/axis_fifo_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:19 on Aug 17,2025
+# vlog -reportprogress 300 /home/ahmed/capstone_project/packet_parser/sim/axis_fifo_tb.sv 
+# -- Compiling package axis_fifo_tb_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo_tb
+# 
+# Top level modules:
+# 	axis_fifo_tb
+# End time: 17:53:19 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.axis_fifo_tb
+# vsim work.axis_fifo_tb 
+# Start time: 17:53:20 on Aug 17,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.axis_fifo_tb_sv_unit
+# Loading work.axis_fifo_tb
+# Refreshing /home/ahmed/capstone_project/work.axis_fifo
+# ** Error (suppressible): (vlog-12110) The -novopt option has no effect on this product. -novopt option is now deprecated and will be removed in future releases.
+# ** Error: vlog failed.
+# subinvocation of vlog failed; return status = 1.
+# ** Error: (vsim-3171) Could not find machine code for '/home/ahmed/capstone_project/work.axis_fifo'.
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 17:53:20 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:57 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Error (suppressible): /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(66): (vlog-12003) Variable 'full' written by continuous and procedural assignments. See /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(40). 
+# End time: 17:53:57 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:53:59 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Error (suppressible): /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(66): (vlog-12003) Variable 'full' written by continuous and procedural assignments. See /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(40). 
+# End time: 17:53:59 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:54:00 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Error (suppressible): /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(66): (vlog-12003) Variable 'full' written by continuous and procedural assignments. See /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(40). 
+# End time: 17:54:00 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:54:01 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Error (suppressible): /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(66): (vlog-12003) Variable 'full' written by continuous and procedural assignments. See /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(40). 
+# End time: 17:54:01 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+k
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:54:18 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(15): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Error (suppressible): /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(66): (vlog-12003) Variable 'full' written by continuous and procedural assignments. See /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(40). 
+# End time: 17:54:18 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:37 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(13): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(13): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 17:59:37 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:38 on Aug 17,2025
+# vlog -reportprogress 300 -work work /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv 
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(13): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling package axis_fifo_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module axis_fifo
+# ** Warning: /home/ahmed/capstone_project/packet_parser/src/axis/axis_fifo.sv(13): (vlog-13314) Defaulting port 'wr_data' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	axis_fifo
+# End time: 17:59:38 on Aug 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vsim work.axis_fifo_tb
+# vsim work.axis_fifo_tb 
+# Start time: 17:59:46 on Aug 17,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.axis_fifo_tb_sv_unit
+# Loading work.axis_fifo_tb
+# Loading work.axis_fifo_sv_unit
+# Loading work.axis_fifo
+add wave -position insertpoint sim:/axis_fifo_tb/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Read data: 0, tlast=0, tuser=0
+run
+# Read data: 0, tlast=0, tuser=0
+run
+# Read data: 1, tlast=0, tuser=1
+run
+# Read data: 2, tlast=0, tuser=2
+run
+# Read data: 3, tlast=0, tuser=3
+run
+# Read data: 4, tlast=0, tuser=4
+run
+# Read data: 5, tlast=0, tuser=5
+run
+# Read data: 6, tlast=0, tuser=6
+run
+# Read data: 7, tlast=0, tuser=7
+run
+run
+run
+# ** Note: $finish    : /home/ahmed/capstone_project/packet_parser/sim/axis_fifo_tb.sv(96)
+#    Time: 235 ns  Iteration: 0  Instance: /axis_fifo_tb
+# 1
+# Break in Module axis_fifo_tb at /home/ahmed/capstone_project/packet_parser/sim/axis_fifo_tb.sv line 96
+# End time: 18:02:14 on Aug 17,2025, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 0

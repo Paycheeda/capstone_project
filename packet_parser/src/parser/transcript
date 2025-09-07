@@ -1,0 +1,241 @@
+# vsim tb_eth_ipv4_parser 
+# Start time: 15:18:01 on Sep 07,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_eth_ipv4_parser_sv_unit
+# Loading work.tb_eth_ipv4_parser
+# Loading work.eth_ipv4_parser_top_sv_unit
+# Loading work.eth_ipv4_parser_top
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+# Loading work.ipv4_header_parser_sv_unit
+# Loading work.ipv4_header_parser
+add wave -r /*
+radix hex
+# hexadecimal
+run -all
+# 
+# --- Sending Ethernet + IPv4 Frame ---
+# Break key hit
+# Simulation stop requested.
+# UVM Details: design does not contain any  UVM components, UVM debugging is disabled, or an  unknown questa_uvm_pkg has been loaded.
+# Break key hit
+make
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv ipv4_header_parser.sv ipv6_header_parser.sv stream_aligner.sv packet_parser_top.sv tb_packet_parser_top.sv tb_ethernet_header_parser.sv eth_ipv4_parser_top.sv tb_eth_ipv4_parser.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:39 on Sep 07,2025
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv ipv4_header_parser.sv ipv6_header_parser.sv stream_aligner.sv packet_parser_top.sv tb_packet_parser_top.sv tb_ethernet_header_parser.sv eth_ipv4_parser_top.sv tb_eth_ipv4_parser.sv 
+# -- Compiling package axis_pkg
+# -- Compiling package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling package ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ethernet_header_parser
+# -- Compiling package ipv4_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ipv4_header_parser
+# -- Compiling package ipv6_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ipv6_header_parser
+# -- Compiling package stream_aligner_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module stream_aligner
+# -- Compiling package packet_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module packet_parser_top
+# -- Compiling package tb_packet_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_packet_parser_top
+# -- Compiling package tb_ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_ethernet_header_parser
+# -- Compiling package eth_ipv4_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module eth_ipv4_parser_top
+# -- Compiling package tb_eth_ipv4_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_eth_ipv4_parser
+# 
+# Top level modules:
+# 	tb_packet_parser_top
+# 	tb_ethernet_header_parser
+# 	tb_eth_ipv4_parser
+# End time: 15:59:40 on Sep 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim
+# Load canceled
+vsim tb_eth_ipv4_parser.sv
+# OpenFile tb_eth_ipv4_parser.sv
+vsim tb_eth_ipv4_parser
+# End time: 16:00:05 on Sep 07,2025, Elapsed time: 0:42:04
+# Errors: 0, Warnings: 0
+# vsim tb_eth_ipv4_parser 
+# Start time: 16:00:05 on Sep 07,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_eth_ipv4_parser_sv_unit
+# Loading work.tb_eth_ipv4_parser
+# Loading work.eth_ipv4_parser_top_sv_unit
+# Loading work.eth_ipv4_parser_top
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+# Loading work.ipv4_header_parser_sv_unit
+# Loading work.ipv4_header_parser
+add wave -r /*
+radix hex
+# hexadecimal
+run -all
+# 
+# --- Sending Ethernet + IPv4 Frame ---
+# Break key hit
+# Simulation stop requested.
+make
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv ipv4_header_parser.sv ipv6_header_parser.sv stream_aligner.sv packet_parser_top.sv tb_packet_parser_top.sv tb_ethernet_header_parser.sv eth_ipv4_parser_top.sv tb_eth_ipv4_parser.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:04:44 on Sep 07,2025
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv ipv4_header_parser.sv ipv6_header_parser.sv stream_aligner.sv packet_parser_top.sv tb_packet_parser_top.sv tb_ethernet_header_parser.sv eth_ipv4_parser_top.sv tb_eth_ipv4_parser.sv 
+# -- Compiling package axis_pkg
+# -- Compiling package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling package ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ethernet_header_parser
+# -- Compiling package ipv4_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ipv4_header_parser
+# -- Compiling package ipv6_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ipv6_header_parser
+# -- Compiling package stream_aligner_sv_unit
+# -- Importing package axis_pkg
+# -- Compiling module stream_aligner
+# -- Compiling package packet_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module packet_parser_top
+# -- Compiling package tb_packet_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_packet_parser_top
+# -- Compiling package tb_ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_ethernet_header_parser
+# -- Compiling package eth_ipv4_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module eth_ipv4_parser_top
+# -- Compiling package tb_eth_ipv4_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_eth_ipv4_parser
+# 
+# Top level modules:
+# 	tb_packet_parser_top
+# 	tb_ethernet_header_parser
+# 	tb_eth_ipv4_parser
+# End time: 16:04:44 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim tb_eth_ipv4_parser
+# End time: 16:04:51 on Sep 07,2025, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 0
+# vsim tb_eth_ipv4_parser 
+# Start time: 16:04:51 on Sep 07,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_eth_ipv4_parser_sv_unit
+# Loading work.tb_eth_ipv4_parser
+# Loading work.eth_ipv4_parser_top_sv_unit
+# Loading work.eth_ipv4_parser_top
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+# Loading work.ipv4_header_parser_sv_unit
+# Loading work.ipv4_header_parser
+add wave -r /*
+radix hex
+# hexadecimal
+run -all
+# 
+# --- Sending Ethernet + IPv4 Frame ---
+# Break key hit
+# Break in Module ipv4_header_parser at ipv4_header_parser.sv line 42
+make
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv ipv4_header_parser.sv ipv6_header_parser.sv packet_parser_top.sv tb_packet_parser_top.sv tb_ethernet_header_parser.sv 
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:22:52 on Sep 07,2025
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv ipv4_header_parser.sv ipv6_header_parser.sv packet_parser_top.sv tb_packet_parser_top.sv tb_ethernet_header_parser.sv 
+# -- Compiling package axis_pkg
+# -- Compiling package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling package ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ethernet_header_parser
+# -- Compiling package ipv4_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ipv4_header_parser
+# -- Compiling package ipv6_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ipv6_header_parser
+# -- Compiling package packet_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module packet_parser_top
+# -- Compiling package tb_packet_parser_top_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_packet_parser_top
+# -- Compiling package tb_ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module tb_ethernet_header_parser
+# 
+# Top level modules:
+# 	tb_packet_parser_top
+# 	tb_ethernet_header_parser
+# End time: 16:22:52 on Sep 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim tb_packet_parser_top
+# End time: 16:23:02 on Sep 07,2025, Elapsed time: 0:18:11
+# Errors: 0, Warnings: 0
+# vsim tb_packet_parser_top 
+# Start time: 16:23:02 on Sep 07,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_packet_parser_top_sv_unit
+# Loading work.tb_packet_parser_top
+# Loading work.packet_parser_top_sv_unit
+# Loading work.packet_parser_top
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+# Loading work.ipv4_header_parser_sv_unit
+# Loading work.ipv4_header_parser
+# Loading work.ipv6_header_parser_sv_unit
+# Loading work.ipv6_header_parser
+add wave -r /*
+radix hex
+# hexadecimal
+run -all
+# 
+# --- Sending IPv4 Frame ---
+# Break key hit
+# Break in Module tb_packet_parser_top at tb_packet_parser_top.sv line 172
+# End time: 17:05:18 on Sep 07,2025, Elapsed time: 0:42:16
+# Errors: 0, Warnings: 0

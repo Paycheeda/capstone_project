@@ -1,0 +1,72 @@
+backup for axis_fifoi
+
+mport axis_pkg::*;
+
+module axis_fifo #(
+	parameter data_width = 64,
+	parameter data_user = 128,
+	parameter depth = 8
+
+	)
+	(
+	input logic aclk,    // Clock
+	input logic aresetn, 
+
+	//write ports
+	input logic wr_en,
+	input axis_word_t wr_data,
+	output logic full,
+
+	//read ports
+	input logic rd_en,
+	output axis_word_t rd_data,
+	output logic empty
+);
+
+	localparam int keep_width = data_width/8;
+	localparam int addr_width = $clog2(depth);
+
+	//fifo memory
+	axis_word_t mem [depth-1:0];
+
+	// rd\wr ptrs
+	logic [addr_width:0] wr_ptr , rd_ptr;
+	logic [addr_width:0] count;
+
+	//write logic
+	always_ff @(posedge aclk or negedge aresetn) begin : proc_write
+		if(!aresetn) begin
+			 wr_ptr <= 0;
+			 rd_ptr <= 0;
+			 count  <= 0;
+		end else begin
+			 if (wr_en && !full) begin
+			 	mem[wr_ptr[addr_width-1:0]] <= wr_data;
+			 	wr_ptr <= wr_ptr + 1;
+			 	count  <= count  + 1;
+
+			 end
+		end
+	end
+
+
+	//read logic
+	always_ff @(posedge aclk or negedge aresetn) begin : proc_read
+		if(!aresetn) begin
+			 rd_ptr <= 0;
+		end else begin
+			 if (rd_en && !empty) begin
+			 	rd_ptr <= rd_ptr + 1;
+			 	count  <= count  - 1;
+			 end
+		end
+	end
+
+	//flags
+	assign empty = (count==0);
+	assign full  = (count==depth);
+
+	//data read out
+	assign rd_data = mem[rd_ptr[addr_width-1:0]];
+
+endmodule : axis_fifo
