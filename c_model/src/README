@@ -1,0 +1,14 @@
+to run the packet parser , 
+open terminal , go to the folder where cmodel is located
+(cd ...../c_model/src)
+
+run the following commands
+make clean //just in case , skippable
+make
+./test
+
+to get more number of packets open test.c 
+goto line 12 (const int N = 5;)
+change the value of N to whatver number you want
+
+by default creates 5 packets and parses them.
