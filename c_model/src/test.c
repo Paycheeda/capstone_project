@@ -1,49 +1,29 @@
 #include <stdio.h>
-#include <stdint.h>
+#include <stdlib.h>
+#include <time.h>
 #include "parser.h"
 
-// Declare unified parser
-void parse_and_print(const uint8_t *frame, size_t len);
+size_t generate_ipv4_packet(uint8_t *buf);
+size_t generate_ipv6_packet(uint8_t *buf);
 
-int main() {
-    // Ethernet + IPv4
-    uint8_t ipv4_frame[] = {
-        // Ethernet
-        0xAA,0xBB,0xCC,0xDD,0xEE,0xFF,
-        0x11,0x22,0x33,0x44,0x55,0x66,
-        0x08,0x00,
-        // IPv4 header
-        0x45,0x00,0x00,0x3C,
-        0x1C,0x46,0x40,0x00,
-        0x40,0x06,0xB1,0xE6,
-        0xC0,0xA8,0x00,0x01,
-        0xC0,0xA8,0x00,0xC7
-    };
+int main(void) {
+    srand((unsigned)time(NULL));
 
-    // Ethernet + IPv6
-    uint8_t ipv6_frame[] = {
-        // Ethernet
-        0xFF,0xEE,0xDD,0xCC,0xBB,0xAA,
-        0x66,0x55,0x44,0x33,0x22,0x11,
-        0x86,0xDD,
-        // IPv6 header
-        0x60,0x00,0x00,0x00,
-        0x00,0x14,
-        0x3A,
-        0x40,
-        // Src IP
-        0x20,0x01,0x0D,0xB8,0,0,0,0,
-        0,0,0,0,0,0,0,1,
-        // Dst IP
-        0x20,0x01,0x0D,0xB8,0,0,0,0,
-        0,0,0,0,0,0,0,2
-    };
+    const int N = 5;
+    uint8_t buf[1500];
+    parser_t ctx;
 
-    printf("====== IPv4 Frame ======\n");
-    parse_and_print(ipv4_frame, sizeof(ipv4_frame));
-
-    printf("\n====== IPv6 Frame ======\n");
-    parse_and_print(ipv6_frame, sizeof(ipv6_frame));
-
+    for (int i = 0; i < N; ++i) {
+        printf("\n===== Packet %d =====\n", i + 1);
+        size_t len;
+        if ((rand() & 1) == 0) {
+            len = generate_ipv4_packet(buf);
+            printf("[generated IPv4 packet length=%zu]\n", len);
+        } else {
+            len = generate_ipv6_packet(buf);
+            printf("[generated IPv6 packet length=%zu]\n", len);
+        }
+        parse_packet(buf, len, &ctx);
+    }
     return 0;
 }
