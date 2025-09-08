@@ -3,6 +3,13 @@
 #include <time.h>
 #include "parser.h"
 
+/*
+test file to run , runs a loop for N amount of time
+creates random packet
+selects ipv4 or ipv6 based on odd/even number by rand function
+calls parser.c which displays it
+*/
+
 size_t generate_ipv4_packet(uint8_t *buf);
 size_t generate_ipv6_packet(uint8_t *buf);
 

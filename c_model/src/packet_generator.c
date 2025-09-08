@@ -2,6 +2,12 @@
 #include <stdint.h>
 #include <string.h>
 #include "parser.h"
+/*
+the random packet generator
+all of this is made by gpt, i was there to give the idea really, but for long tests i wanted a random packet generator
+this does that, i understand it now , but ill explain line by line as well
+*/
+
 
 /* helpers are local to this file */
 static void random_mac(uint8_t *mac) {
@@ -14,9 +20,8 @@ static void random_ipv6(uint8_t *ip) {
     for (int i = 0; i < 16; ++i) ip[i] = rand_byte();
 }
 
-/* Build IPv4 packet (ethernet + IPv4 header).
- * Packet bytes are in network order (big-endian).
- * Returns total bytes written.
+/* 
+ethernet+ipv4 packet builder below
  */
 size_t generate_ipv4_packet(uint8_t *buf) {
     uint8_t *p = buf;
@@ -39,14 +44,16 @@ size_t generate_ipv4_packet(uint8_t *buf) {
     p[9] = 6;  /* proto TCP */
     p[10] = 0; p[11] = 0; /* checksum placeholder */
 
-    /* src ip and dst ip (write bytes to avoid host-endian problems) */
+    /* src ip and dst ip */
     for (int i = 0; i < 4; ++i) p[12 + i] = (uint8_t)(rand() % 256);
     for (int i = 0; i < 4; ++i) p[16 + i] = (uint8_t)(rand() % 256);
 
     return (size_t)(14 + 20);
 }
 
-/* Build IPv6 packet (ethernet + IPv6 header). */
+/* 
+ethernet+ipv6 packet builder below
+*/
 size_t generate_ipv6_packet(uint8_t *buf) {
     uint8_t *p = buf;
 

@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdint.h>
 
+/*ipv6 parser module*/
+
 void parse_ipv6(const uint8_t *packet, ipv6_header_t *ipv6_hdr) {
     if (!packet || !ipv6_hdr) return;
 

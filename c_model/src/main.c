@@ -2,7 +2,13 @@
 #include <string.h>
 #include "parser.h"
 
-// ---------- Helper: MAC/IP Printers ----------
+/*
+main module which connected ethernet parser to ipv4 and ipv6 parser
+
+helpers to print more efficiently, benevolence of GPT
+reason being, my old print function looked very amateur, wanted to make it look professional
+*/
+
 void print_mac(const uint8_t *mac) {
     printf("%02X:%02X:%02X:%02X:%02X:%02X",
            mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
@@ -23,7 +29,7 @@ void print_ipv6(const uint8_t *ip) {
     }
 }
 
-// ---------- Pretty Printers ----------
+/*printer functions for headers accordingly*/
 void print_ethernet(const ethernet_header_t *eth) {
     printf("Ethernet Header:\n");
     printf("  Src MAC: "); print_mac(eth->src_mac); printf("\n");
@@ -60,7 +66,7 @@ void print_ipv6_header(const ipv6_header_t *ip) {
     printf("  Dst IP: "); print_ipv6(ip->dst_ip); printf("\n");
 }
 
-// ---------- Unified Parser ----------
+/* complete parser which parses the ethernet header then decides if to call ipv4 or ipv6 next*/
 void parse_and_print(const uint8_t *frame, size_t len) {
     parser_t ctx = {0};
 

@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-/* local printers */
+/* this is the upgraded main.c function , and is what is used for test.c
+Key Difference:
+-displays complete and all fields of ipv4 and ipv6, main.c only displayed select few field
+-has checks integrated incase the packet is indifferent
+
+*/
 static void print_mac(const uint8_t *mac) {
     printf("%02X:%02X:%02X:%02X:%02X:%02X",
            mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);

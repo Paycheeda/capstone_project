@@ -1,18 +1,17 @@
 #include "parser.h"
 #include <stdint.h>
 
+/*IPV4 parser module*/
+
 void parse_ipv4(const uint8_t *packet, ipv4_header_t *ipv4_hdr) {
     if (!packet || !ipv4_hdr) return;
 
-    /* Version & IHL */
     ipv4_hdr->version = (uint8_t)((packet[0] >> 4) & 0x0F);
     ipv4_hdr->ihl     = (uint8_t)(packet[0] & 0x0F);
 
-    /* DSCP / ECN */
     ipv4_hdr->dscp = (uint8_t)((packet[1] >> 2) & 0x3F);
     ipv4_hdr->ecn  = (uint8_t)(packet[1] & 0x03);
 
-    /* network-order (big-endian) bytes -> host-order integers */
     ipv4_hdr->total_length   = (uint16_t)((uint16_t)packet[2] << 8) | (uint16_t)packet[3];
     ipv4_hdr->identification = (uint16_t)((uint16_t)packet[4] << 8) | (uint16_t)packet[5];
 

@@ -3,15 +3,17 @@
 
 #include <stdint.h>
 #include <stddef.h>
-
-// ================== Ethernet ==================
+/*
+HEADER FILE based on the package file i made in the RTL, follows same format and structure , defines fields for each packet type accordingly.
+*/
+//  Ethernet 
 typedef struct {
     uint8_t  dst_mac[6];
     uint8_t  src_mac[6];
     uint16_t ethertype;   // 0x0800 = IPv4, 0x86DD = IPv6 (stored host-order)
 } ethernet_header_t;
 
-// ================== IPv4 ==================
+//  IPv4 
 typedef struct {
     uint8_t  version;         // 4 bits
     uint8_t  ihl;             // 4 bits
@@ -28,7 +30,7 @@ typedef struct {
     uint32_t dst_ip; // stored as host-order 32-bit
 } ipv4_header_t;
 
-// ================== IPv6 ==================
+// IPv6 
 typedef struct {
     uint8_t  version;         // 4 bits
     uint8_t  traffic_class;   // 8 bits
@@ -40,13 +42,13 @@ typedef struct {
     uint8_t  dst_ip[16];
 } ipv6_header_t;
 
-// ================== Union ==================
+// Union 
 typedef union {
     ipv4_header_t ipv4;
     ipv6_header_t ipv6;
 } ip_header_u;
 
-// ================== Parser Context ==================
+// Parser Context 
 typedef struct {
     ethernet_header_t eth_hdr;
     ip_header_u       ip_hdr;
@@ -54,12 +56,12 @@ typedef struct {
     int               is_ipv6;
 } parser_t;
 
-// ================== Parser Functions ==================
+//Parser Functions 
 void parse_ethernet(const uint8_t *frame, ethernet_header_t *eth_hdr);
 void parse_ipv4(const uint8_t *packet, ipv4_header_t *ipv4_hdr);
 void parse_ipv6(const uint8_t *packet, ipv6_header_t *ipv6_hdr);
 
-// ================== Packet Generator Functions ==================
+// Packet Generator Functions 
 size_t generate_ipv4_packet(uint8_t *buf);
 size_t generate_ipv6_packet(uint8_t *buf);
 
