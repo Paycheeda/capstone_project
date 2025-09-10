@@ -1,0 +1,158 @@
+# vsim tb_parser_top 
+# Start time: 18:31:44 on Sep 09,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_parser_top_sv_unit
+# Loading work.tb_parser_top
+# Loading work.top_sv_unit
+# Loading work.parser_top
+# Loading work.preamble_sfd_detector_sv_unit
+# Loading work.preamble_sfd_detector
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+add wave -r /*
+radix hex
+# hexadecimal
+run 100n
+# Invalid time value: 100n
+run 1000000
+# ===== Results =====
+# Preamble detected: 1
+# Header done:       0
+# Start IPv4:        0
+# Start IPv6:        0
+# Dst MAC: 112233445566, Src MAC: aabbccddeeff, Ethertype: 0800
+# ** Note: $finish    : tb_parser_top.sv(98)
+#    Time: 215 ns  Iteration: 1  Instance: /tb_parser_top
+# 1
+# Break in Module tb_parser_top at tb_parser_top.sv line 98
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+make
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv preamble_sfd_detector.sv top.sv tb_parser_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:41:40 on Sep 09,2025
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv preamble_sfd_detector.sv top.sv tb_parser_top.sv 
+# -- Compiling package axis_pkg
+# -- Compiling package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling package ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ethernet_header_parser
+# -- Compiling package preamble_sfd_detector_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module preamble_sfd_detector
+# -- Compiling package top_sv_unit
+# -- Importing package axis_pkg
+# -- Importing package parser_pkg
+# -- Compiling module parser_top
+# -- Compiling package tb_parser_top_sv_unit
+# -- Importing package axis_pkg
+# -- Importing package parser_pkg
+# -- Compiling module tb_parser_top
+# 
+# Top level modules:
+# 	tb_parser_top
+# End time: 18:41:40 on Sep 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim tb_parser_top
+# End time: 18:41:49 on Sep 09,2025, Elapsed time: 0:10:05
+# Errors: 0, Warnings: 0
+# vsim tb_parser_top 
+# Start time: 18:41:49 on Sep 09,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_parser_top_sv_unit
+# Loading work.tb_parser_top
+# Loading work.top_sv_unit
+# Loading work.parser_top
+# Loading work.preamble_sfd_detector_sv_unit
+# Loading work.preamble_sfd_detector
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'u_preamble'.  Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_parser_top/dut/u_preamble File: top.sv Line: 48
+# ** Warning: (vsim-3722) top.sv(48): [TFMPC] - Missing connection for port 'ethertypein'.
+add wave -r /*
+radix hex
+# hexadecimal
+run -all
+# ===== Results =====
+# Preamble detected: 1
+# Header done:       0
+# Start IPv4:        0
+# Start IPv6:        0
+# Dst MAC: 112233445566, Src MAC: aabbccddeeff, Ethertype: 0800
+# ** Note: $finish    : tb_parser_top.sv(98)
+#    Time: 215 ns  Iteration: 1  Instance: /tb_parser_top
+# 1
+# Break in Module tb_parser_top at tb_parser_top.sv line 98
+make
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv preamble_sfd_detector.sv top.sv tb_parser_top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:44:36 on Sep 09,2025
+# vlog -sv axis_pkg.sv parser_pkg.sv ethernet_header_parser.sv preamble_sfd_detector.sv top.sv tb_parser_top.sv 
+# -- Compiling package axis_pkg
+# -- Compiling package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling package ethernet_header_parser_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module ethernet_header_parser
+# -- Compiling package preamble_sfd_detector_sv_unit
+# -- Importing package parser_pkg
+# -- Importing package axis_pkg
+# -- Compiling module preamble_sfd_detector
+# -- Compiling package top_sv_unit
+# -- Importing package axis_pkg
+# -- Importing package parser_pkg
+# -- Compiling module parser_top
+# -- Compiling package tb_parser_top_sv_unit
+# -- Importing package axis_pkg
+# -- Importing package parser_pkg
+# -- Compiling module tb_parser_top
+# 
+# Top level modules:
+# 	tb_parser_top
+# End time: 18:44:36 on Sep 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim tb_parser_top
+# End time: 18:44:40 on Sep 09,2025, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 2
+# vsim tb_parser_top 
+# Start time: 18:44:40 on Sep 09,2025
+# Loading sv_std.std
+# Loading work.axis_pkg
+# Loading work.parser_pkg
+# Loading work.tb_parser_top_sv_unit
+# Loading work.tb_parser_top
+# Loading work.top_sv_unit
+# Loading work.parser_top
+# Loading work.preamble_sfd_detector_sv_unit
+# Loading work.preamble_sfd_detector
+# Loading work.ethernet_header_parser_sv_unit
+# Loading work.ethernet_header_parser
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (112) for port 'ethertypein'. The port definition is at: preamble_sfd_detector.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_parser_top/dut/u_preamble File: top.sv Line: 48
+add wave -r /*
+radix hex
+# hexadecimal
+run -all
+# ===== Results =====
+# Preamble detected: 1
+# Header done:       0
+# Start IPv4:        0
+# Start IPv6:        0
+# Dst MAC: 112233445566, Src MAC: aabbccddeeff, Ethertype: 0800
+# ** Note: $finish    : tb_parser_top.sv(98)
+#    Time: 215 ns  Iteration: 1  Instance: /tb_parser_top
+# 1
+# Break in Module tb_parser_top at tb_parser_top.sv line 98

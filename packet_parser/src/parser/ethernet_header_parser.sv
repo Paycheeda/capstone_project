@@ -276,7 +276,10 @@ module ethernet_header_parser #(
     input  logic [DATA_W-1:0] s_axis_tdata,
     input  logic              s_axis_tvalid,
     input  logic              s_axis_tlast,
-    output logic              s_axis_tready,
+    output /*input*/ logic              s_axis_tready,/*enable signal*/
+
+    // Handshake from top: signals when whole metadata (eth+ip) has been consumed
+    input  logic              meta_done,
 
     // Outputs
     output eth_header_t       eth_hdr,
@@ -285,15 +288,18 @@ module ethernet_header_parser #(
     output logic              start_ipv6
 );
 
+
     localparam int BYTES_W = DATA_W/8;
     initial begin
         if (DATA_W % 8 != 0) $fatal("DATA_W must be multiple of 8");
     end
 
-    assign s_axis_tready = 1'b1;
-    wire accept = s_axis_tvalid && s_axis_tready;
+    
 
-    typedef enum logic [1:0] {S_IDLE, S_WORD1, S_DONE} state_t;
+    wire accept = s_axis_tvalid && s_axis_tready/*enable*/;
+
+    typedef enum logic [1:0] {S_IDLE, S_WORD1, S_DONE, S_HOLD} state_t;
+
     state_t state, nstate;
 
     logic [47:0] dst_mac_r;
@@ -312,6 +318,7 @@ module ethernet_header_parser #(
     assign header_done       = header_done_r;
     assign start_ipv4        = (ipv4_cnt != 0);
     assign start_ipv6        = (ipv6_cnt != 0);
+    assign s_axis_tready = 1'b1;
 
     // next state
     always_comb begin
@@ -319,9 +326,11 @@ module ethernet_header_parser #(
         unique case (state)
             S_IDLE : if (accept) nstate = S_WORD1;
             S_WORD1: if (accept) nstate = S_DONE;
-            S_DONE :              nstate = S_IDLE;
+            S_DONE :              nstate = S_HOLD;
+            S_HOLD : if (meta_done && s_axis_tlast) nstate = S_IDLE;
         endcase
     end
+/*all good till here*/
 
     // state register
     always_ff @(posedge aclk or negedge aresetn) begin

@@ -33,11 +33,14 @@ module packet_parser_top #(
         .s_axis_tlast (s_axis_tlast),
         .s_axis_tready(s_axis_tready),
 
+        .meta_done(meta_done),  // NEW
+
         .eth_hdr(eth_hdr),
         .header_done(eth_done),
         .start_ipv4(start_ipv4),
         .start_ipv6(start_ipv6)
     );
+
 
     // aligner: drop ethernet header (14 bytes)
     logic [DATA_W-1:0] ip_tdata;
@@ -125,5 +128,15 @@ assign ip_tready = (start_ipv4) ? ip4_tready :
 
     assign metadata  = meta_r;
     assign meta_valid = meta_valid_r;
+
+    // generate meta_done pulse when metadata is valid
+    logic meta_done_r;
+    assign meta_done = meta_done_r;
+
+    always_ff @(posedge aclk or negedge aresetn) begin
+        if (!aresetn) meta_done_r <= 1'b0;
+        else          meta_done_r <= meta_valid_r; // one-cycle after meta_valid
+    end
+
 
 endmodule : packet_parser_top
